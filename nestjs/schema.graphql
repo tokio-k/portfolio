@@ -1,0 +1,13 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type SampleModel {
+  id: Int!
+  name: String!
+  freeInput: String!
+}
+
+type Query {
+  sample(id: Int!): SampleModel
+}
