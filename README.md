@@ -4,6 +4,9 @@
 
 - Next.js
 - TypeScript
+
+* GraphQL
+
 - Apollo Client
 - GraphQL Code Generator
 - ESLint
