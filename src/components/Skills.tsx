@@ -44,14 +44,18 @@ export const Skills = () => {
     "https://qiita.com/api/v2/users/toki_k/items?per_page=100"
   );
 
-  let likesCount = 0;
-  const itemsCount = data[0].user.items_count;
+  if (!data) {
+    return <div>loading</div>; // todo loadingのUI作成
+  }
 
-  if (!error && data) {
+  let likesCount = 0;
+  if (!error) {
     data.map((item: any) => {
       likesCount += item.likes_count;
     });
   }
+
+  const itemsCount = !error ? data[0].user.items_count : 0;
 
   return (
     <div className="min-h-screen bg-gray-200 py-10">
@@ -92,10 +96,14 @@ export const Skills = () => {
               https://qiita.com/toki_k
             </a>
           </p>
-          <ul className="text-2xl flex flex-col h-40 place-content-around">
-            <li>記事数：{itemsCount} </li>
-            <li>総LGTM：{likesCount}</li>
-          </ul>
+          {error ? (
+            <p>エラーが発生しました</p> //todo エラーのUI作成
+          ) : (
+            <ul className="text-2xl flex flex-col h-40 place-content-around">
+              <li>記事数：{itemsCount} </li>
+              <li>総LGTM：{likesCount}</li>
+            </ul>
+          )}
         </div>
       </div>
     </div>
