@@ -58,7 +58,7 @@ export const Skills = () => {
   const itemsCount = !error ? data[0].user.items_count : 0;
 
   return (
-    <div className="min-h-screen bg-gray-200 py-10">
+    <div className="min-h-screen py-10  bg-gradient-to-b from-yellow-500 via-yellow-500 to-red-500">
       <Title title={"SKILLS"} />
       <ul className="flex place-content-around flex-wrap">
         {SKILLS.map((skill) => {
@@ -76,7 +76,7 @@ export const Skills = () => {
         })}
       </ul>
       <div className="flex place-content-around flex-wrap mt-16">
-        <div className="bg-white w-80 p-3 font-bold border border-gray-300 shadow-md my-2">
+        <div className="bg-yellow-400 w-80 p-3 font-bold border border-yellow-700 shadow-md my-2">
           <p className="text-3xl pb-3">保有資格</p>
           <ul>
             {QUALIFICATION.map((item) => {
@@ -88,7 +88,7 @@ export const Skills = () => {
             })}
           </ul>
         </div>
-        <div className="bg-white w-80 p-3 font-bold border border-gray-300 shadow-md my-2">
+        <div className="bg-yellow-400 w-80 p-3 font-bold border border-yellow-700 shadow-md my-2">
           <p className="text-3xl pb-1">Qiita</p>
           <p>
             <span className="pr-2">→</span>

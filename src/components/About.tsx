@@ -2,7 +2,7 @@ import { Title } from "src/components/shared/Title";
 
 export const About = () => {
   return (
-    <div className="bg-gray-400 text-white min-h-screen flex flex-col">
+    <div className=" min-h-screen flex flex-col bg-gradient-to-b from-green-500 via-green-500 to-yellow-500">
       <Title title={"ABOUT"} />
       <div className="flex place-content-center items-center flex-auto pb-40 font-bold sm:text-xl ">
         {/* todo image作成 */}
