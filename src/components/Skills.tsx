@@ -88,7 +88,7 @@ export const Skills = () => {
             })}
           </ul>
         </div>
-        <div className="bg-yellow-400 w-80 p-3 font-bold border border-yellow-700 shadow-md my-2">
+        <div className="bg-qiita-green w-80 p-3 font-bold border border-yellow-700 shadow-md my-2">
           <p className="text-3xl pb-1">Qiita</p>
           <p>
             <span className="pr-2">→</span>
