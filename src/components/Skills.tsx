@@ -1,5 +1,5 @@
+import type { VFC } from "react";
 import { Title } from "src/components/shared/Title";
-import useSWR from "swr";
 
 type SkillsType = {
   title1: string;
@@ -39,23 +39,17 @@ const QUALIFICATION = [
   "UMTP L1",
 ];
 
-export const Skills = () => {
-  const { data, error } = useSWR(
-    "https://qiita.com/api/v2/users/toki_k/items?per_page=100"
-  );
+type Props = {
+  data: any;
+};
 
-  if (!data) {
-    return <div>loading</div>; // todo loadingのUI作成
-  }
-
+export const Skills: VFC<Props> = ({ data }) => {
   let likesCount = 0;
-  if (!error) {
-    data.map((item: any) => {
-      likesCount += item.likes_count;
-    });
-  }
+  data.map((item: any) => {
+    likesCount += item.likes_count;
+  });
 
-  const itemsCount = !error ? data[0].user.items_count : 0;
+  const itemsCount = data[0].user.items_count;
 
   return (
     <div className="min-h-screen py-10  bg-gradient-to-b from-yellow-500 via-yellow-500 to-red-500">
@@ -96,14 +90,10 @@ export const Skills = () => {
               https://qiita.com/toki_k
             </a>
           </p>
-          {error ? (
-            <p>エラーが発生しました</p> //todo エラーのUI作成
-          ) : (
-            <ul className="text-2xl flex flex-col h-40 place-content-around">
-              <li>記事数：{itemsCount} </li>
-              <li>総LGTM：{likesCount}</li>
-            </ul>
-          )}
+          <ul className="text-2xl flex flex-col h-40 place-content-around">
+            <li>記事数：{itemsCount} </li>
+            <li>総LGTM：{likesCount}</li>
+          </ul>
         </div>
       </div>
     </div>
