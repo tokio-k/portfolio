@@ -52,7 +52,7 @@ export const Skills: VFC<Props> = ({ data }) => {
   const itemsCount = data[0].user.items_count;
 
   return (
-    <div className="min-h-screen py-10">
+    <div className="min-h-screen">
       <Title title={"SKILLS"} />
       <ul className="flex place-content-around flex-wrap">
         {SKILLS.map((skill) => {
@@ -84,12 +84,6 @@ export const Skills: VFC<Props> = ({ data }) => {
         </div>
         <div className="bg-qiita-green w-80 p-3 font-bold border border-yellow-700 shadow-md my-2">
           <p className="text-3xl pb-1">Qiita</p>
-          <p>
-            <span className="pr-2">→</span>
-            <a className="text-blue-500" href="https://qiita.com/toki_k">
-              https://qiita.com/toki_k
-            </a>
-          </p>
           <ul className="text-2xl flex flex-col h-40 place-content-around">
             <li>記事数：{itemsCount} </li>
             <li>総LGTM：{likesCount}</li>
