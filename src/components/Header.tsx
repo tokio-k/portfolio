@@ -27,7 +27,7 @@ export const Header: VFC<Props> = (props) => {
     },
   ];
   return (
-    <ul className="fixed w-full top-0 flex place-content-around py-6 md:text-lg font-bold bg-opacity-50 bg-white">
+    <ul className="fixed w-full top-0 flex place-content-around py-6 md:text-lg font-bold z-10">
       {HEADER_MENU_LIST.map(({ title, ref }) => {
         const handleClick = () => {
           ref.current?.scrollIntoView({
@@ -36,7 +36,9 @@ export const Header: VFC<Props> = (props) => {
         };
         return (
           <li key={title}>
-            <button onClick={handleClick}>{title}</button>
+            <button onClick={handleClick} className="text-shadow-white">
+              {title}
+            </button>
           </li>
         );
       })}
