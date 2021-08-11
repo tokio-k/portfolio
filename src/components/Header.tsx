@@ -31,7 +31,9 @@ export const Header: VFC<Props> = (props) => {
       <ul className="flex place-content-around py-6 md:text-lg font-bold bg-opacity-50 bg-white">
         {HEADER_MENU_LIST.map(({ title, ref }) => {
           const handleClick = () => {
-            ref.current?.scrollIntoView();
+            ref.current?.scrollIntoView({
+              behavior: "smooth",
+            });
           };
           return (
             <li key={title}>

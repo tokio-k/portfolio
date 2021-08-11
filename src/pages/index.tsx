@@ -31,18 +31,14 @@ const Index = ({ data }: any) => {
         skillsRef={skillsRef}
         worksRef={worksRef}
       />
-      <div ref={homeRef}>
-        <Home />
-      </div>
-      <div ref={aboutRef}>
-        <About />
-      </div>
-      <div ref={skillsRef}>
-        <Skills data={data} />
-      </div>
-      <div ref={worksRef}>
-        <Works />
-      </div>
+      <div ref={homeRef} />
+      <Home />
+      <div ref={aboutRef} />
+      <About />
+      <div ref={skillsRef} />
+      <Skills data={data} />
+      <div ref={worksRef} />
+      <Works />
       <div className="h-36" />
     </div>
   );
