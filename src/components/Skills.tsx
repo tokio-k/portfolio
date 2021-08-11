@@ -52,14 +52,14 @@ export const Skills: VFC<Props> = ({ data }) => {
   const itemsCount = data[0].user.items_count;
 
   return (
-    <div className="min-h-screen py-10  bg-gradient-to-b from-yellow-500 via-yellow-500 to-red-500">
+    <div className="min-h-screen py-10">
       <Title title={"SKILLS"} />
       <ul className="flex place-content-around flex-wrap">
         {SKILLS.map((skill) => {
           return (
             <div
               key={skill.title1}
-              className="shadow-xl border border-red-600 bg-red-500 rounded-full w-60 h-60 flex flex-col place-content-center box-content m-4 font-bold text-white"
+              className="shadow-xl border border-red-600 bg-red-500 rounded-full w-60 h-60 flex flex-col place-content-center box-content m-4 font-bold "
             >
               <p></p>
               <p className="text-3xl">{skill.title1}</p>

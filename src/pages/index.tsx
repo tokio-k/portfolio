@@ -6,7 +6,6 @@ import { Skills } from "src/components/Skills";
 import { Works } from "src/components/Works";
 
 export const getStaticProps: GetStaticProps = async () => {
-  console.log("=====");
   const res = await fetch(
     "https://qiita.com/api/v2/users/toki_k/items?per_page=100"
   );
