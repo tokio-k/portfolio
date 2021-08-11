@@ -15,7 +15,7 @@ const LONG_INTERN = [
     skills: "TypeScript、React、Next.js、Git",
     overview:
       "学生が起業したベンチャーで業務委託として開発。エンジニアは学生のみ(フロントエンド2人)。機能追加やSEO対策、パフォーマンス改善、バグ改修などフロントエンド開発全般を担当。",
-    period: "2021/04~ (現在も)",
+    period: "2021/04~",
     doing: true,
   },
 ];
@@ -49,8 +49,13 @@ export const Works = () => {
                 <div
                   key="companyName"
                   className={`${doing && "border-2 border-red-500"}
-                          text-left bg-white p-5 w-full max-w-sm flex flex-col gap-y-3 m-5 shadow`}
+                          text-left bg-white p-5 w-full max-w-sm flex flex-col gap-y-3 m-5 shadow relative`}
                 >
+                  {doing && (
+                    <div className="absolute top-0 right-0 text-red-500 p-2 font-bold">
+                      所属中
+                    </div>
+                  )}
                   <CardContent title="会社名" content={companyName} />
                   <CardContent title="期間" content={period} />
                   <CardContent title="概要" content={overview} />
