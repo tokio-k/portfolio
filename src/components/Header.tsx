@@ -27,21 +27,19 @@ export const Header: VFC<Props> = (props) => {
     },
   ];
   return (
-    <div className="fixed w-full">
-      <ul className="flex place-content-around py-6 md:text-lg font-bold bg-opacity-50 bg-white">
-        {HEADER_MENU_LIST.map(({ title, ref }) => {
-          const handleClick = () => {
-            ref.current?.scrollIntoView({
-              behavior: "smooth",
-            });
-          };
-          return (
-            <li key={title}>
-              <button onClick={handleClick}>{title}</button>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
+    <ul className="fixed w-full top-0 flex place-content-around py-6 md:text-lg font-bold bg-opacity-50 bg-white">
+      {HEADER_MENU_LIST.map(({ title, ref }) => {
+        const handleClick = () => {
+          ref.current?.scrollIntoView({
+            behavior: "smooth",
+          });
+        };
+        return (
+          <li key={title}>
+            <button onClick={handleClick}>{title}</button>
+          </li>
+        );
+      })}
+    </ul>
   );
 };
