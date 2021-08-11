@@ -26,7 +26,7 @@ export const About = () => {
     <div className=" min-h-screen flex flex-col ">
       <Title title={"ABOUT"} />
 
-      <div className="justify-center flex-auto flex flex-col ">
+      <div className="justify-center flex-auto flex flex-col">
         <div className="flex place-content-center font-bold sm:text-xl flex-col md:flex-row gap-8">
           <div className="">
             <Image
@@ -49,7 +49,7 @@ export const About = () => {
             </p>
           </div>
         </div>
-        <div className="mt-3 m-auto text-left">
+        <div className="mt-3 mx-auto text-left">
           <ol>
             {MYPAGE_ITEM.map(({ title, link }) => {
               return (
