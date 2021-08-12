@@ -44,10 +44,10 @@ export const Works = () => {
         </h4>
         <div className="flex flex-wrap place-content-around">
           {LONG_INTERN.map(
-            ({ companyName, skills, overview, period, doing }) => {
+            ({ companyName, skills, overview, period, doing }, i) => {
               return (
                 <div
-                  key="companyName"
+                  key={i}
                   className={`${
                     doing ? "border-2 border-red-500" : "border border-gray-300"
                   }
