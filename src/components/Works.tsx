@@ -48,8 +48,10 @@ export const Works = () => {
               return (
                 <div
                   key="companyName"
-                  className={`${doing && "border-2 border-red-500"}
-                          text-left bg-white p-5 w-full max-w-sm flex flex-col gap-y-3 m-5 shadow relative`}
+                  className={`${
+                    doing ? "border-2 border-red-500" : "border border-gray-300"
+                  }
+                          text-left bg-white p-5 w-full max-w-sm flex flex-col gap-y-3 m-5 shadow-md relative`}
                 >
                   {doing && (
                     <div className="absolute top-0 right-0 text-red-500 p-2 font-bold">
