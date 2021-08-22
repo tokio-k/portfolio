@@ -90,7 +90,7 @@ export const Header: VFC<Props> = ({
               onClick={handleClick}
               className={`${
                 position >= offset && position < nextOffset
-                  ? " text-shadow-black text-white border border-gray-400 shadow-xl rounded-md bg-yellow-100 bg-opacity-60"
+                  ? " text-shadow-black text-white border border-gray-600 rounded-md bg-yellow-100 bg-opacity-80"
                   : "text-shadow-white"
               } py-1 px-3 font-bold`}
             >
