@@ -26,7 +26,7 @@ export const About = () => {
     <div className=" min-h-screen flex flex-col ">
       <Title title={"ABOUT"} />
 
-      <div className="justify-center flex-auto flex flex-col">
+      <div className="justify-center flex-auto flex flex-col mb-10">
         <div className="flex place-content-center font-bold sm:text-xl flex-col md:flex-row gap-8">
           <div className="">
             <Image
