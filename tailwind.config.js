@@ -26,6 +26,11 @@ module.exports = {
           background:
             "radial-gradient(closest-side at center,rgba(255,255,0,1) 0%,rgba(255,255,50,0.5) 70%, rgba(255,255,0, 0) 100%)",
         },
+        ".bg-thema": {
+          background:
+            "radial-gradient(circle farthest-side at center,#ddc 0%,#33f 30%, #33ffff 70%, #80bfff 100%)",
+          backgroundAttachment: "fixed !important",
+        },
       };
       addUtilities(newUtilities);
     },
