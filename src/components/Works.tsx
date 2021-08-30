@@ -96,7 +96,7 @@ type CardListType = {
 const WorkCardList: VFC<CardListType> = ({ title, workList }) => {
   return (
     <div className="mb-5">
-      <h3 className="font-bold text-lg py-3">{title}</h3>
+      <h3 className="font-bold text-lg py-3 text-shadow-white">{title}</h3>
       <div className="flex flex-wrap place-content-around">
         {workList.map((work, i) => {
           return (
