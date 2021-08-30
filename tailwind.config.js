@@ -22,6 +22,10 @@ module.exports = {
           textShadow:
             "0 0 3px #000,0 0 3px #000,0 0 3px #000,0 0 3px #000,0 0 3px #000,0 0 3px #000,0 0 3px #000,0 0 3px #000,0 0 3px #000,0 0 3px #000,0 0 3px #000,0 0 3px #000,0 0 3px #000,0 0 3px #000",
         },
+        ".active-header-radial-gradient": {
+          background:
+            "radial-gradient(closest-side at center,rgba(255,255,0,1) 0%,rgba(255,255,50,0.5) 70%, rgba(255,255,0, 0) 100%)",
+        },
       };
       addUtilities(newUtilities);
     },
