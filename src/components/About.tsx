@@ -26,7 +26,7 @@ export const About = () => {
     <div className=" min-h-screen flex flex-col items-center">
       <Title title={"ABOUT"} />
 
-      <div className="justify-center flex-auto flex flex-col mb-10 bg-gray-200 py-5 px-2 mx-3 rounded-lg max-w-lg md:max-w-2xl border">
+      <div className="justify-center flex-auto flex flex-col mb-10 bg-gray-200 py-5 px-2 mx-3 rounded-lg max-w-lg md:max-w-2xl border shadow-md">
         <div className="flex place-content-center font-bold sm:text-xl flex-col md:flex-row gap-8">
           <div className="">
             <Image
