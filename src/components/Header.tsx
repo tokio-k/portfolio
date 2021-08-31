@@ -88,11 +88,11 @@ export const Header: VFC<Props> = ({
           <li key={title}>
             <button
               onClick={handleClick}
-              className={`${
+              className={`py-3 px-3 font-bold ${
                 position >= offset && position < nextOffset
-                  ? " text-shadow-black text-white border border-gray-600 rounded-md bg-yellow-100 bg-opacity-80"
+                  ? " text-shadow-black text-white active-header-radial-gradient px-10"
                   : "text-shadow-white"
-              } py-1 px-3 font-bold`}
+              } `}
             >
               {title}
             </button>

@@ -24,7 +24,7 @@ const Index = ({ data }: any) => {
   const skillsRef = createRef<HTMLDivElement>();
   const worksRef = createRef<HTMLDivElement>();
   return (
-    <div className="text-center bg-yellow-50">
+    <div className="text-center bg-thema">
       <Header
         homeRef={homeRef}
         aboutRef={aboutRef}

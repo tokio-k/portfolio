@@ -23,10 +23,10 @@ const MYPAGE_ITEM: MyPageType = [
 
 export const About = () => {
   return (
-    <div className=" min-h-screen flex flex-col ">
+    <div className=" min-h-screen flex flex-col items-center">
       <Title title={"ABOUT"} />
 
-      <div className="justify-center flex-auto flex flex-col mb-10">
+      <div className="justify-center flex-auto flex flex-col mb-10 bg-gray-200 py-5 px-2 mx-3 rounded-lg max-w-lg md:max-w-2xl border">
         <div className="flex place-content-center font-bold sm:text-xl flex-col md:flex-row gap-8">
           <div className="">
             <Image
@@ -36,15 +36,16 @@ export const About = () => {
               className="rounded-full"
             />
           </div>
-          <div className="">
+          <div className="text-left">
             <p>愛知県の文系大学3年生です。</p>
-            <p>大学1年生の時にプログラミングを始め</p>
-            <p>勤怠サービス開発の長期インターンを経験後、</p>
-            <p>今はベンチャー企業でエンジニアをしています。</p>
+            <p>
+              大学1年生の時にプログラミングを始め、
+              勤怠サービス開発のインターンを経験し、
+              現在はベンチャー企業でエンジニアをしております。
+            </p>
             <div className="h-7" />
             <p>
-              高校生の時はハンドボールに熱中しており、
-              <br />
+              高校生の時はハンドボールに力を入れており、
               インターハイ全国3位の経験もあります。
             </p>
           </div>

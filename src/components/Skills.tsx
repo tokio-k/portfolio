@@ -2,31 +2,32 @@ import type { VFC } from "react";
 import { Title } from "src/components/shared/Title";
 
 type SkillsType = {
-  title1: string;
-  title2: string;
+  title: string;
   period: string;
+  overview: string;
 }[];
 
 const SKILLS: SkillsType = [
   {
-    title1: "Java",
-    title2: "Spring Boot",
+    title: "Java、SpringBoot",
     period: "1年",
+    overview:
+      "株式会社SNAPSHOTやサイボウズ株式会社のインターンで使用。初めて学んだ言語。",
   },
   {
-    title1: "Oracle",
-    title2: "PostgreSQL",
+    title: "SQL",
     period: "1年",
+    overview: "株式会社SNAPSHOTのインターンで使用。",
   },
   {
-    title1: "React",
-    title2: "TypeScript",
+    title: "TypeScript、React",
     period: "半年",
+    overview: "株式会社OnePileや個人で使用。最近一番力を入れている。",
   },
   {
-    title1: "Git",
-    title2: "",
+    title: "Git",
     period: "半年",
+    overview: "株式会社OnePileや個人で使用。",
   },
 ];
 
@@ -45,11 +46,13 @@ type Props = {
 
 export const Skills: VFC<Props> = ({ data }) => {
   let likesCount = 0;
-  data.map((item: any) => {
-    likesCount += item.likes_count;
-  });
-
-  const itemsCount = data[0].user.items_count;
+  let itemsCount = 0;
+  if (data) {
+    data.map((item: any) => {
+      likesCount += item.likes_count;
+    });
+    itemsCount = data[0].user.items_count;
+  }
 
   return (
     <div className="min-h-screen">
@@ -58,19 +61,22 @@ export const Skills: VFC<Props> = ({ data }) => {
         {SKILLS.map((skill) => {
           return (
             <div
-              key={skill.title1}
-              className="shadow-xl border border-red-600 bg-red-500 rounded-full w-60 h-60 flex flex-col place-content-center box-content m-4 font-bold "
+              key={skill.title}
+              className="border-red-600 border-2 rounded-lg w-80  box-content m-4 font-bold "
             >
-              <p></p>
-              <p className="text-3xl">{skill.title1}</p>
-              <p className="text-3xl pb-5">{skill.title2}</p>
-              <p className="text-xl">{skill.period}</p>
+              <div className="bg-red-500 flex py-5 rounded-t-md">
+                <p className="flex-auto text-lg">{skill.title}</p>
+                <p className="flex-none mr-5">歴：{skill.period}</p>
+              </div>
+              <div className="p-3 bg-gray-50 rounded-b-md h-24">
+                <p>{skill.overview}</p>
+              </div>
             </div>
           );
         })}
       </ul>
       <div className="flex place-content-around flex-wrap mt-16">
-        <div className="bg-yellow-400 w-80 p-3 font-bold border shadow-md my-2">
+        <div className="bg-yellow-400 w-80 p-3 font-bold shadow-md my-2">
           <p className="text-3xl pb-3">保有資格</p>
           <ul>
             {QUALIFICATION.map((item) => {
@@ -82,7 +88,7 @@ export const Skills: VFC<Props> = ({ data }) => {
             })}
           </ul>
         </div>
-        <div className="bg-qiita-green w-80 p-3 font-bold border shadow-md my-2">
+        <div className="bg-qiita-green w-80 p-3 font-bold shadow-md my-2">
           <p className="text-3xl pb-1">Qiita</p>
           <ul className="text-2xl flex flex-col h-40 place-content-around">
             <li>記事数：{itemsCount} </li>
