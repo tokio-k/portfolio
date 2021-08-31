@@ -6,6 +6,9 @@ module.exports = {
       colors: {
         "qiita-green": "#55c500",
       },
+      zIndex: {
+        "-10": "-10",
+      },
     },
   },
   variants: {
@@ -29,7 +32,6 @@ module.exports = {
         ".bg-thema": {
           background:
             "radial-gradient(circle farthest-side at center,#ddc 0%,#33f 30%, #33ffff 70%, #80bfff 100%)",
-          backgroundAttachment: "fixed !important",
         },
       };
       addUtilities(newUtilities);
