@@ -24,22 +24,25 @@ const Index = ({ data }: any) => {
   const skillsRef = createRef<HTMLDivElement>();
   const worksRef = createRef<HTMLDivElement>();
   return (
-    <div className="text-center bg-thema">
-      <Header
-        homeRef={homeRef}
-        aboutRef={aboutRef}
-        skillsRef={skillsRef}
-        worksRef={worksRef}
-      />
-      <div ref={homeRef} />
-      <Home />
-      <div ref={aboutRef} />
-      <About />
-      <div ref={skillsRef} />
-      <Skills data={data} />
-      <div ref={worksRef} />
-      <Works />
-      <div className="h-36" />
+    <div>
+      <div className="bg-thema fixed w-full h-screen inset-0 -z-10" />
+      <div className="text-center">
+        <Header
+          homeRef={homeRef}
+          aboutRef={aboutRef}
+          skillsRef={skillsRef}
+          worksRef={worksRef}
+        />
+        <div ref={homeRef} />
+        <Home />
+        <div ref={aboutRef} />
+        <About />
+        <div ref={skillsRef} />
+        <Skills data={data} />
+        <div ref={worksRef} />
+        <Works />
+        <div className="h-36" />
+      </div>
     </div>
   );
 };
