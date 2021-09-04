@@ -26,6 +26,13 @@ const LONG_INTERN: WorkList = [
     skills: "TypeScript、React、Next.js、Git",
     doing: true,
   },
+  {
+    companyName: "株式会社エイチーム",
+    period: "2021/09~",
+    overview: "長期インターンシップとして週3日程勤務",
+    skills: "TypeScript、React、Ruby、Git",
+    doing: true,
+  },
 ];
 
 const SHORT_INTERN: WorkList = [
