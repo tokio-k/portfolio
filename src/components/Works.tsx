@@ -14,7 +14,7 @@ const LONG_INTERN: WorkList = [
     companyName: "株式会社SNAPSHOT",
     period: "2020/05~2021/03",
     overview:
-      "勤怠管理サービスの開発インターン。設計書を基に機能追加や改修の実装をしていました。フロントエンドから、バックエンド、DBまでの一連の流れを機能ごとに実装していました。",
+      "勤怠管理サービスの開発インターン。設計書を基に機能追加や改修の実装。フロントエンドからバックエンド、DBまでの一連の流れを機能ごとに実装。",
     skills: "Java、SpringBoot、jQuery、postgres、oracle",
     doing: false,
   },
@@ -24,6 +24,14 @@ const LONG_INTERN: WorkList = [
     overview:
       "学生が起業したベンチャーで業務委託として開発。エンジニアは学生のみ(フロントエンド2人)。機能追加やSEO対策、パフォーマンス改善、バグ改修などフロントエンド開発全般を担当。",
     skills: "TypeScript、React、Next.js、Git",
+    doing: true,
+  },
+  {
+    companyName: "株式会社エイチーム",
+    period: "2021/09~",
+    overview:
+      "長期インターンシップとして週3日程勤務。increments株式会社のプロダクトの開発をしている。",
+    skills: "TypeScript、React、Ruby、Git",
     doing: true,
   },
 ];
