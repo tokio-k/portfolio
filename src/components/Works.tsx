@@ -31,7 +31,7 @@ const LONG_INTERN: WorkList = [
     period: "2021/09~",
     overview:
       "長期インターンシップとして週3日程勤務。increments株式会社のプロダクトの開発をしている。",
-    skills: "TypeScript、React、Ruby、Git",
+    skills: "TypeScript、React、Ruby、Rails、Git",
     doing: true,
   },
 ];
