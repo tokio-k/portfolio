@@ -15,19 +15,15 @@ const SKILLS: SkillsType = [
       "株式会社SNAPSHOTやサイボウズ株式会社のインターンで使用。初めて学んだ言語。",
   },
   {
-    title: "SQL",
-    period: "1年",
-    overview: "株式会社SNAPSHOTのインターンで使用。",
-  },
-  {
     title: "TypeScript、React",
     period: "半年",
-    overview: "株式会社OnePileや個人で使用。最近一番力を入れている。",
+    overview:
+      "現在一番好きな言語。株式会社OnePileや株式会社エイチームでの開発で使用。",
   },
   {
-    title: "Git",
-    period: "半年",
-    overview: "株式会社OnePileや個人で使用。",
+    title: "Ruby、Rails",
+    period: "1ヶ月",
+    overview: "株式会社エイチームでの開発で使用。",
   },
 ];
 
@@ -62,13 +58,13 @@ export const Skills: VFC<Props> = ({ data }) => {
           return (
             <div
               key={skill.title}
-              className="border-red-600 border-2 rounded-lg w-80  box-content m-4 font-bold "
+              className="border-red-600 border-2 rounded-lg w-80  box-content m-4 font-bold"
             >
               <div className="bg-red-500 flex py-5 rounded-t-md">
                 <p className="flex-auto text-lg">{skill.title}</p>
                 <p className="flex-none mr-5">歴：{skill.period}</p>
               </div>
-              <div className="p-3 bg-gray-50 rounded-b-md h-24">
+              <div className="p-3 bg-gray-50 rounded-b-md h-24 text-left">
                 <p>{skill.overview}</p>
               </div>
             </div>
