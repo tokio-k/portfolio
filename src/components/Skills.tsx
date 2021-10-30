@@ -22,7 +22,7 @@ const SKILLS: SkillsType = [
   },
   {
     title: "Ruby、Rails",
-    period: "1ヶ月",
+    period: "2ヶ月",
     overview: "株式会社エイチームでの開発で使用。",
   },
 ];
