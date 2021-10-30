@@ -30,7 +30,7 @@ const LONG_INTERN: WorkList = [
     companyName: "株式会社エイチーム",
     period: "2021/09~",
     overview:
-      "長期インターンシップとして週3日程勤務。increments株式会社のプロダクトの開発をしている。",
+      "就業型インターンシップとして週3日程勤務。increments株式会社のプロダクトの開発をしている。フロントエンドとバックエンド両方担当。",
     skills: "TypeScript、React、Ruby、Rails、Git",
     doing: true,
   },
